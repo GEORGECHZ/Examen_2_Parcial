@@ -15,6 +15,10 @@ class bienvenida : AppCompatActivity() {
 
 
         val parExtra = intent.extras
+        val n = parExtra?.getString("nombre")
+        val a = parExtra?.getString("apellido")
+        binding.textView2.text = n.toString()
+        binding.textView3.text = a.toString()
 
         binding.button.setOnClickListener(){
             val inento1 = Intent(this,MainActivity::class.java)
